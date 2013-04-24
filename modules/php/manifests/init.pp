@@ -10,7 +10,15 @@ class php {
         "php5-xdebug",
         "libapache2-mod-php5"
     ]
+
     package { $packages:
         ensure => latest
+    }
+
+    file { "/etc/php5/apache2/php.ini":
+        ensure => present,
+        source => "/vagrant/etc/php5/apache2/php.ini",
+        owner => root, group => root,
+        require => Package["libapache2-mod-php5"]
     }
 }

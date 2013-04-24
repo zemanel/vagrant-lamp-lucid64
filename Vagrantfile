@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-## http://www.vagrantbox.es/
+## http://www.vagrantbox.es
 #
 Vagrant::Config.run do |config|
   # All Vagrant configuration is done here. The most common configuration
